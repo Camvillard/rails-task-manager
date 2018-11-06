@@ -11,6 +11,7 @@
       <i class="far fa-square"></i>
       <% end %>
       <%= link_to task.title, task_path(task.id)  %>
+      <%= link_to "delete the task", task_path(task), method: :delete %>
     </li>
     <% end %>
   </ul>
