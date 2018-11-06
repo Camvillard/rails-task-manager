@@ -5,5 +5,8 @@
   <%= f.label :details %>
   <%= f.text_field :details %>
 
+  <%= f.check_box(:completed) %>
+  <%= f.label(:completed, "task completed") %>
+
   <%= f.submit %>
 <% end %>

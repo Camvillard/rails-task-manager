@@ -1,12 +1,25 @@
-<h2><%= @task.title %></h2>
+<div id="single-task">
 
-<h5><%= @task.details %></h5>
+    <div class="task-details">
+      <p><span>to do :</span></p>
+      <h1><%= @task.title %></h1>
 
-<% if @task.completed %>
-    <p><i class="far fa-check-square"></i> the task is all done, cool cool meuf</p>
-<% else %>
-    <p><i class="far fa-square"></i> the task is not completed yet</p>
-<% end %>
+      <p><span>side note about it:</span></p>
+      <h5><%= @task.details %></h5>
+    </div>
 
-<%= link_to 'edit the task', task_edit_path(@task) %>
-<%= link_to "go back to the list", '/tasks' %>
+    <div class="task-status">
+      <% if @task.completed %>
+        <p>the task is all done, cool cool meuf</p>
+      <% else %>
+        <p>the task is not completed yet</p>
+      <% end %>
+    </div>
+
+    <div class="task-actions">
+      <%= link_to 'delete', task_path(@task), method: :delete, class: "task-delete" %>
+      <%= link_to 'edit', task_edit_path(@task), class: "task-edit" %>
+      <%= link_to "back", '/tasks', class: "task-back" %>
+    </div>
+
+</div>

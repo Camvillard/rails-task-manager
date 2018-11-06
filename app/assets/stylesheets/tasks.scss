@@ -1,3 +1,178 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ------ IMPORTS ------ */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,700,700i|Open+Sans:400,400i|Roboto+Mono:300,300i');
+
+/* ------ VARIABLES ------ */
+
+$cotton-candy: #FFE5EE;
+$charleston-green: #272932;
+$honeydew: #F5FBEF;
+$gray-green: #607B7D;
+$slate-gray: #304F5B;
+
+$primary-color: $slate-gray;
+$accent-color: $cotton-candy;
+
+$font-family-josefin: 'Josefin Sans', sans-serif;
+$font-family-roboto: 'Roboto Mono', monospace;
+$font-family-open: 'Open Sans', sans-serif;
+
+$font-family-primary: $font-family-open;
+$font-family-headings: $font-family-josefin;
+$font-family-accent: $font-family-roboto;
+
+$font-size-base: 100%;
+
+
+/* ------ GENERAL STYLES ------ */
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-josefin;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-family: $font-family-roboto;
+}
+
+
+/* ------ ALL TASKS PAGE ------ */
+
+#all-tasks {
+  background: $cotton-candy;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: $charleston-green;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: $charleston-green;
+  }
+}
+
+#tasks {
+  margin: 20px auto;
+  .fa-trash-alt {
+    color: $charleston-green;
+    font-size: 0.8rem;
+  }
+}
+
+#new-task {
+  margin: 20px auto;
+
+  a {
+    background: $slate-gray;
+    color: white;
+    padding: 12px 24px;
+    color: white;
+    transition: all 0.3s ease-out;
+  }
+
+  a:hover {
+    color: $charleston-green;
+    background: white;
+  }
+}
+
+/* ------ SINGLE TASK PAGE ------ */
+
+
+#single-task {
+  background: $gray-green;
+  color: white;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .task-details p span{
+    margin-left: -20px;
+    background: white;
+    color: $charleston-green;
+    font-family: $font-family-accent;
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+    text-align: left;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+    text-align: left;
+    span {
+      font-size: 0.9rem;
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+
+  .task-status {
+    align-content: start;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .task-actions {
+    position: fixed;
+    bottom: 4vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    a {
+      color: $charleston-green;
+      margin: 0px 14px;
+      border-bottom: 3px solid transparent;
+    }
+
+    a:hover {
+      content: 'prout';
+      // background: white;
+      border-bottom: 3px solid white;
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
