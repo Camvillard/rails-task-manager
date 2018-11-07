@@ -1,9 +1,9 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div id="new-task">
+  <%= form_for(@task) do |f| %>
+    <%= f.text_field :title, placeholder: "what do you want to do ?" %>
 
-  <%= f.label :details %>
-  <%= f.text_field :details %>
+    <%= f.text_field :details, placeholder: "details, please." %>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
+</div>
